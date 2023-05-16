@@ -35,8 +35,7 @@ mixin _$Article {
 
 /// @nodoc
 abstract class $ArticleCopyWith<$Res> {
-  factory $ArticleCopyWith(Article value, $Res Function(Article) then) =
-      _$ArticleCopyWithImpl<$Res, Article>;
+  factory $ArticleCopyWith(Article value, $Res Function(Article) then) = _$ArticleCopyWithImpl<$Res, Article>;
   @useResult
   $Res call(
       {String title,
@@ -50,8 +49,7 @@ abstract class $ArticleCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArticleCopyWithImpl<$Res, $Val extends Article>
-    implements $ArticleCopyWith<$Res> {
+class _$ArticleCopyWithImpl<$Res, $Val extends Article> implements $ArticleCopyWith<$Res> {
   _$ArticleCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -108,9 +106,7 @@ class _$ArticleCopyWithImpl<$Res, $Val extends Article>
 
 /// @nodoc
 abstract class _$$_ArticleCopyWith<$Res> implements $ArticleCopyWith<$Res> {
-  factory _$$_ArticleCopyWith(
-          _$_Article value, $Res Function(_$_Article) then) =
-      __$$_ArticleCopyWithImpl<$Res>;
+  factory _$$_ArticleCopyWith(_$_Article value, $Res Function(_$_Article) then) = __$$_ArticleCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -126,11 +122,9 @@ abstract class _$$_ArticleCopyWith<$Res> implements $ArticleCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ArticleCopyWithImpl<$Res>
-    extends _$ArticleCopyWithImpl<$Res, _$_Article>
+class __$$_ArticleCopyWithImpl<$Res> extends _$ArticleCopyWithImpl<$Res, _$_Article>
     implements _$$_ArticleCopyWith<$Res> {
-  __$$_ArticleCopyWithImpl(_$_Article _value, $Res Function(_$_Article) _then)
-      : super(_value, _then);
+  __$$_ArticleCopyWithImpl(_$_Article _value, $Res Function(_$_Article) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -182,8 +176,7 @@ class _$_Article implements _Article {
       required this.url,
       @JsonKey(name: 'urlToImage') this.imageUrl});
 
-  factory _$_Article.fromJson(Map<String, dynamic> json) =>
-      _$$_ArticleFromJson(json);
+  factory _$_Article.fromJson(Map<String, dynamic> json) => _$$_ArticleFromJson(json);
 
   @override
   final String title;
@@ -210,25 +203,21 @@ class _$_Article implements _Article {
         (other.runtimeType == runtimeType &&
             other is _$_Article &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
+            (identical(other.description, description) || other.description == description) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.source, source) || other.source == source) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl));
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, title, description, author, source, url, imageUrl);
+  int get hashCode => Object.hash(runtimeType, title, description, author, source, url, imageUrl);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ArticleCopyWith<_$_Article> get copyWith =>
-      __$$_ArticleCopyWithImpl<_$_Article>(this, _$identity);
+  _$$_ArticleCopyWith<_$_Article> get copyWith => __$$_ArticleCopyWithImpl<_$_Article>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -264,8 +253,7 @@ abstract class _Article implements Article {
   String? get imageUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_ArticleCopyWith<_$_Article> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ArticleCopyWith<_$_Article> get copyWith => throw _privateConstructorUsedError;
 }
 
 Source _$SourceFromJson(Map<String, dynamic> json) {
@@ -283,15 +271,13 @@ mixin _$Source {
 
 /// @nodoc
 abstract class $SourceCopyWith<$Res> {
-  factory $SourceCopyWith(Source value, $Res Function(Source) then) =
-      _$SourceCopyWithImpl<$Res, Source>;
+  factory $SourceCopyWith(Source value, $Res Function(Source) then) = _$SourceCopyWithImpl<$Res, Source>;
   @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class _$SourceCopyWithImpl<$Res, $Val extends Source>
-    implements $SourceCopyWith<$Res> {
+class _$SourceCopyWithImpl<$Res, $Val extends Source> implements $SourceCopyWith<$Res> {
   _$SourceCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -315,19 +301,15 @@ class _$SourceCopyWithImpl<$Res, $Val extends Source>
 
 /// @nodoc
 abstract class _$$_SourceCopyWith<$Res> implements $SourceCopyWith<$Res> {
-  factory _$$_SourceCopyWith(_$_Source value, $Res Function(_$_Source) then) =
-      __$$_SourceCopyWithImpl<$Res>;
+  factory _$$_SourceCopyWith(_$_Source value, $Res Function(_$_Source) then) = __$$_SourceCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class __$$_SourceCopyWithImpl<$Res>
-    extends _$SourceCopyWithImpl<$Res, _$_Source>
-    implements _$$_SourceCopyWith<$Res> {
-  __$$_SourceCopyWithImpl(_$_Source _value, $Res Function(_$_Source) _then)
-      : super(_value, _then);
+class __$$_SourceCopyWithImpl<$Res> extends _$SourceCopyWithImpl<$Res, _$_Source> implements _$$_SourceCopyWith<$Res> {
+  __$$_SourceCopyWithImpl(_$_Source _value, $Res Function(_$_Source) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -348,8 +330,7 @@ class __$$_SourceCopyWithImpl<$Res>
 class _$_Source implements _Source {
   _$_Source({required this.name});
 
-  factory _$_Source.fromJson(Map<String, dynamic> json) =>
-      _$$_SourceFromJson(json);
+  factory _$_Source.fromJson(Map<String, dynamic> json) => _$$_SourceFromJson(json);
 
   @override
   final String name;
@@ -362,9 +343,7 @@ class _$_Source implements _Source {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Source &&
-            (identical(other.name, name) || other.name == name));
+        (other.runtimeType == runtimeType && other is _$_Source && (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
@@ -374,8 +353,7 @@ class _$_Source implements _Source {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SourceCopyWith<_$_Source> get copyWith =>
-      __$$_SourceCopyWithImpl<_$_Source>(this, _$identity);
+  _$$_SourceCopyWith<_$_Source> get copyWith => __$$_SourceCopyWithImpl<_$_Source>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -394,8 +372,7 @@ abstract class _Source implements Source {
   String get name;
   @override
   @JsonKey(ignore: true)
-  _$$_SourceCopyWith<_$_Source> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SourceCopyWith<_$_Source> get copyWith => throw _privateConstructorUsedError;
 }
 
 AppState _$AppStateFromJson(Map<String, dynamic> json) {
@@ -410,21 +387,18 @@ mixin _$AppState {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AppStateCopyWith<AppState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AppStateCopyWith<AppState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AppStateCopyWith<$Res> {
-  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
-      _$AppStateCopyWithImpl<$Res, AppState>;
+  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) = _$AppStateCopyWithImpl<$Res, AppState>;
   @useResult
   $Res call({List<Article> articles, bool isLoading, bool hasMore});
 }
 
 /// @nodoc
-class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
-    implements $AppStateCopyWith<$Res> {
+class _$AppStateCopyWithImpl<$Res, $Val extends AppState> implements $AppStateCopyWith<$Res> {
   _$AppStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -458,8 +432,7 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
 
 /// @nodoc
 abstract class _$$_AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
-  factory _$$_AppState$CopyWith(
-          _$_AppState$ value, $Res Function(_$_AppState$) then) =
+  factory _$$_AppState$CopyWith(_$_AppState$ value, $Res Function(_$_AppState$) then) =
       __$$_AppState$CopyWithImpl<$Res>;
   @override
   @useResult
@@ -467,12 +440,9 @@ abstract class _$$_AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AppState$CopyWithImpl<$Res>
-    extends _$AppStateCopyWithImpl<$Res, _$_AppState$>
+class __$$_AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res, _$_AppState$>
     implements _$$_AppState$CopyWith<$Res> {
-  __$$_AppState$CopyWithImpl(
-      _$_AppState$ _value, $Res Function(_$_AppState$) _then)
-      : super(_value, _then);
+  __$$_AppState$CopyWithImpl(_$_AppState$ _value, $Res Function(_$_AppState$) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -501,14 +471,10 @@ class __$$_AppState$CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppState$ implements _AppState$ {
-  const _$_AppState$(
-      {final List<Article> articles = const [],
-      this.isLoading = false,
-      this.hasMore = true})
+  const _$_AppState$({final List<Article> articles = const [], this.isLoading = false, this.hasMore = true})
       : _articles = articles;
 
-  factory _$_AppState$.fromJson(Map<String, dynamic> json) =>
-      _$$_AppState$FromJson(json);
+  factory _$_AppState$.fromJson(Map<String, dynamic> json) => _$$_AppState$FromJson(json);
 
   final List<Article> _articles;
   @override
@@ -537,21 +503,18 @@ class _$_AppState$ implements _AppState$ {
         (other.runtimeType == runtimeType &&
             other is _$_AppState$ &&
             const DeepCollectionEquality().equals(other._articles, _articles) &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading) &&
+            (identical(other.isLoading, isLoading) || other.isLoading == isLoading) &&
             (identical(other.hasMore, hasMore) || other.hasMore == hasMore));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_articles), isLoading, hasMore);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_articles), isLoading, hasMore);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AppState$CopyWith<_$_AppState$> get copyWith =>
-      __$$_AppState$CopyWithImpl<_$_AppState$>(this, _$identity);
+  _$$_AppState$CopyWith<_$_AppState$> get copyWith => __$$_AppState$CopyWithImpl<_$_AppState$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -562,13 +525,9 @@ class _$_AppState$ implements _AppState$ {
 }
 
 abstract class _AppState$ implements AppState {
-  const factory _AppState$(
-      {final List<Article> articles,
-      final bool isLoading,
-      final bool hasMore}) = _$_AppState$;
+  const factory _AppState$({final List<Article> articles, final bool isLoading, final bool hasMore}) = _$_AppState$;
 
-  factory _AppState$.fromJson(Map<String, dynamic> json) =
-      _$_AppState$.fromJson;
+  factory _AppState$.fromJson(Map<String, dynamic> json) = _$_AppState$.fromJson;
 
   @override
   List<Article> get articles;
@@ -578,6 +537,5 @@ abstract class _AppState$ implements AppState {
   bool get hasMore;
   @override
   @JsonKey(ignore: true)
-  _$$_AppState$CopyWith<_$_AppState$> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AppState$CopyWith<_$_AppState$> get copyWith => throw _privateConstructorUsedError;
 }

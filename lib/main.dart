@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:http/http.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_epics/redux_epics.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -23,13 +22,13 @@ void main() {
       EpicMiddleware<AppState>(epic.call).call,
     ],
   );
-  store.dispatch(GetArticles.start());
+  store.dispatch(const GetArticles.start());
 
   runApp(MyApp(store: store));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key, required this.store}) : super(key: key);
+  const MyApp({super.key, required this.store});
   final Store<AppState> store;
 
   @override
@@ -38,13 +37,13 @@ class MyApp extends StatelessWidget {
       store: store,
       child: MaterialApp(
         theme: ThemeData.dark().copyWith(
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             elevation: 0,
           ),
         ),
-        home: HomePage(),
+        home: const HomePage(),
         routes: {
-          '/articleDetails': (context) => ArticleDetailsPage(),
+          '/articleDetails': (context) => const ArticleDetailsPage(),
         },
       ),
     );
@@ -52,7 +51,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -74,7 +73,7 @@ class _HomePageState extends State<HomePage> {
     final double maxRange = _controller.position.maxScrollExtent;
 
     if (store.state.hasMore && !store.state.isLoading && (maxRange - offset) < height * 3) {
-      store.dispatch(GetArticles.start());
+      store.dispatch(const GetArticles.start());
     }
   }
 
@@ -87,7 +86,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Google Breaking News'),
-       
       ),
       body: IsLoadingContainer(builder: (BuildContext context, bool isLoading) {
         return ArticlesContainer(builder: (BuildContext context, List<Article> articles) {
@@ -110,72 +108,72 @@ class _HomePageState extends State<HomePage> {
                   margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
-),
-elevation: 2,
-child: Padding(
-padding: const EdgeInsets.all(12.0),
-child: Row(
-crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-if (article.imageUrl != null)
-Container(
-width: 80,
-height: 80,
-margin: const EdgeInsets.only(right: 16.0),
-decoration: BoxDecoration(
-borderRadius: BorderRadius.circular(8.0),
-image: DecorationImage(
-image: NetworkImage(article.imageUrl!),
-fit: BoxFit.cover,
-),
-),
-),
-Expanded(
-child: Column(
-crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text(
-article.title,
-style: const TextStyle(
-fontSize: 18,
-fontWeight: FontWeight.bold,
-),
-maxLines: 2,
-overflow: TextOverflow.ellipsis,
-),
-const SizedBox(height: 8.0),
-if (article.author != null)
-Text(
-'Author: ${article.author}',
-style: const TextStyle(fontSize: 14),
-maxLines: 1,
-overflow: TextOverflow.ellipsis,
-),
-const SizedBox(height: 4.0),
-Text(
-'Source: ${article.source.name}',
-style: const TextStyle(fontSize: 14),
-maxLines: 1,
-overflow: TextOverflow.ellipsis,
-),
-],
-),
-),
-],
-),
-),
-),
-);
-},
-);
-});
-}),
-);
-}
+                  ),
+                  elevation: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (article.imageUrl != null)
+                          Container(
+                            width: 80,
+                            height: 80,
+                            margin: const EdgeInsets.only(right: 16.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: NetworkImage(article.imageUrl!),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                article.title,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const SizedBox(height: 8.0),
+                              if (article.author != null)
+                                Text(
+                                  'Author: ${article.author}',
+                                  style: const TextStyle(fontSize: 14),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              const SizedBox(height: 4.0),
+                              Text(
+                                'Source: ${article.source.name}',
+                                style: const TextStyle(fontSize: 14),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            },
+          );
+        });
+      }),
+    );
+  }
 }
 
 class ArticleDetailsPage extends StatelessWidget {
-  const ArticleDetailsPage({Key? key}) : super(key: key);
+  const ArticleDetailsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -246,7 +244,6 @@ class ArticleDetailsPage extends StatelessWidget {
                     throw Exception('Could not launch');
                   }
                 },
-                child: const Text('Read the Whole Article on the Website'),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
                   textStyle: const TextStyle(fontSize: 16),
@@ -254,6 +251,7 @@ class ArticleDetailsPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
+                child: const Text('Read the Whole Article on the Website'),
               ),
             ),
           ],

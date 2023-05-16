@@ -64,14 +64,12 @@ mixin _$GetArticles {
 
 /// @nodoc
 abstract class $GetArticlesCopyWith<$Res> {
-  factory $GetArticlesCopyWith(
-          GetArticles value, $Res Function(GetArticles) then) =
+  factory $GetArticlesCopyWith(GetArticles value, $Res Function(GetArticles) then) =
       _$GetArticlesCopyWithImpl<$Res, GetArticles>;
 }
 
 /// @nodoc
-class _$GetArticlesCopyWithImpl<$Res, $Val extends GetArticles>
-    implements $GetArticlesCopyWith<$Res> {
+class _$GetArticlesCopyWithImpl<$Res, $Val extends GetArticles> implements $GetArticlesCopyWith<$Res> {
   _$GetArticlesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -82,17 +80,14 @@ class _$GetArticlesCopyWithImpl<$Res, $Val extends GetArticles>
 
 /// @nodoc
 abstract class _$$GetArticlesStartCopyWith<$Res> {
-  factory _$$GetArticlesStartCopyWith(
-          _$GetArticlesStart value, $Res Function(_$GetArticlesStart) then) =
+  factory _$$GetArticlesStartCopyWith(_$GetArticlesStart value, $Res Function(_$GetArticlesStart) then) =
       __$$GetArticlesStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetArticlesStartCopyWithImpl<$Res>
-    extends _$GetArticlesCopyWithImpl<$Res, _$GetArticlesStart>
+class __$$GetArticlesStartCopyWithImpl<$Res> extends _$GetArticlesCopyWithImpl<$Res, _$GetArticlesStart>
     implements _$$GetArticlesStartCopyWith<$Res> {
-  __$$GetArticlesStartCopyWithImpl(
-      _$GetArticlesStart _value, $Res Function(_$GetArticlesStart) _then)
+  __$$GetArticlesStartCopyWithImpl(_$GetArticlesStart _value, $Res Function(_$GetArticlesStart) _then)
       : super(_value, _then);
 }
 
@@ -108,8 +103,7 @@ class _$GetArticlesStart implements GetArticlesStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetArticlesStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetArticlesStart);
   }
 
   @override
@@ -190,19 +184,16 @@ abstract class GetArticlesStart implements GetArticles {
 
 /// @nodoc
 abstract class _$$GetArticlesSuccessfulCopyWith<$Res> {
-  factory _$$GetArticlesSuccessfulCopyWith(_$GetArticlesSuccessful value,
-          $Res Function(_$GetArticlesSuccessful) then) =
+  factory _$$GetArticlesSuccessfulCopyWith(_$GetArticlesSuccessful value, $Res Function(_$GetArticlesSuccessful) then) =
       __$$GetArticlesSuccessfulCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Article> articles});
 }
 
 /// @nodoc
-class __$$GetArticlesSuccessfulCopyWithImpl<$Res>
-    extends _$GetArticlesCopyWithImpl<$Res, _$GetArticlesSuccessful>
+class __$$GetArticlesSuccessfulCopyWithImpl<$Res> extends _$GetArticlesCopyWithImpl<$Res, _$GetArticlesSuccessful>
     implements _$$GetArticlesSuccessfulCopyWith<$Res> {
-  __$$GetArticlesSuccessfulCopyWithImpl(_$GetArticlesSuccessful _value,
-      $Res Function(_$GetArticlesSuccessful) _then)
+  __$$GetArticlesSuccessfulCopyWithImpl(_$GetArticlesSuccessful _value, $Res Function(_$GetArticlesSuccessful) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -222,8 +213,7 @@ class __$$GetArticlesSuccessfulCopyWithImpl<$Res>
 /// @nodoc
 
 class _$GetArticlesSuccessful implements GetArticlesSuccessful {
-  const _$GetArticlesSuccessful(final List<Article> articles)
-      : _articles = articles;
+  const _$GetArticlesSuccessful(final List<Article> articles) : _articles = articles;
 
   final List<Article> _articles;
   @override
@@ -247,15 +237,13 @@ class _$GetArticlesSuccessful implements GetArticlesSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_articles));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_articles));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GetArticlesSuccessfulCopyWith<_$GetArticlesSuccessful> get copyWith =>
-      __$$GetArticlesSuccessfulCopyWithImpl<_$GetArticlesSuccessful>(
-          this, _$identity);
+      __$$GetArticlesSuccessfulCopyWithImpl<_$GetArticlesSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -327,30 +315,25 @@ class _$GetArticlesSuccessful implements GetArticlesSuccessful {
 }
 
 abstract class GetArticlesSuccessful implements GetArticles {
-  const factory GetArticlesSuccessful(final List<Article> articles) =
-      _$GetArticlesSuccessful;
+  const factory GetArticlesSuccessful(final List<Article> articles) = _$GetArticlesSuccessful;
 
   List<Article> get articles;
   @JsonKey(ignore: true)
-  _$$GetArticlesSuccessfulCopyWith<_$GetArticlesSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetArticlesSuccessfulCopyWith<_$GetArticlesSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetArticlesErrorCopyWith<$Res> {
-  factory _$$GetArticlesErrorCopyWith(
-          _$GetArticlesError value, $Res Function(_$GetArticlesError) then) =
+  factory _$$GetArticlesErrorCopyWith(_$GetArticlesError value, $Res Function(_$GetArticlesError) then) =
       __$$GetArticlesErrorCopyWithImpl<$Res>;
   @useResult
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class __$$GetArticlesErrorCopyWithImpl<$Res>
-    extends _$GetArticlesCopyWithImpl<$Res, _$GetArticlesError>
+class __$$GetArticlesErrorCopyWithImpl<$Res> extends _$GetArticlesCopyWithImpl<$Res, _$GetArticlesError>
     implements _$$GetArticlesErrorCopyWith<$Res> {
-  __$$GetArticlesErrorCopyWithImpl(
-      _$GetArticlesError _value, $Res Function(_$GetArticlesError) _then)
+  __$$GetArticlesErrorCopyWithImpl(_$GetArticlesError _value, $Res Function(_$GetArticlesError) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -390,13 +373,11 @@ class _$GetArticlesError implements GetArticlesError {
         (other.runtimeType == runtimeType &&
             other is _$GetArticlesError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            (identical(other.stackTrace, stackTrace) ||
-                other.stackTrace == stackTrace));
+            (identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
 
   @JsonKey(ignore: true)
   @override
@@ -474,12 +455,10 @@ class _$GetArticlesError implements GetArticlesError {
 }
 
 abstract class GetArticlesError implements GetArticles {
-  const factory GetArticlesError(
-      final Object error, final StackTrace stackTrace) = _$GetArticlesError;
+  const factory GetArticlesError(final Object error, final StackTrace stackTrace) = _$GetArticlesError;
 
   Object get error;
   StackTrace get stackTrace;
   @JsonKey(ignore: true)
-  _$$GetArticlesErrorCopyWith<_$GetArticlesError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetArticlesErrorCopyWith<_$GetArticlesError> get copyWith => throw _privateConstructorUsedError;
 }

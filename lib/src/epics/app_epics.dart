@@ -11,7 +11,8 @@ class AppEpics implements EpicClass<AppState> {
 
   @override
   Stream<dynamic> call(Stream<dynamic> actions, EpicStore<AppState> store) {
-    return combineEpics(<Epic<AppState>>[TypedEpic<AppState, GetArticlesStart>(_getArticlesStart).call])(actions, store);
+    return combineEpics(<Epic<AppState>>[TypedEpic<AppState, GetArticlesStart>(_getArticlesStart).call])(
+        actions, store);
   }
 
   Stream<GetArticles> _getArticlesStart(Stream<GetArticlesStart> actions, EpicStore<AppState> store) {

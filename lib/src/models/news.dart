@@ -8,11 +8,10 @@ class Article with _$Article {
     String? author,
     required Source source,
     required String url,
-    @JsonKey(name: 'urlToImage')  String? imageUrl,
+    @JsonKey(name: 'urlToImage') String? imageUrl,
   }) = _Article;
 
-  factory Article.fromJson(Map<String, dynamic> json) =>
-      _$ArticleFromJson(json);
+  factory Article.fromJson(Map<String, dynamic> json) => _$ArticleFromJson(json);
 }
 
 @freezed
@@ -21,6 +20,5 @@ class Source with _$Source {
     required String name,
   }) = _Source;
 
-  factory Source.fromJson(Map<String, dynamic> json) =>
-      _$SourceFromJson(json);
+  factory Source.fromJson(Map<String, dynamic> json) => _$SourceFromJson(json);
 }

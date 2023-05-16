@@ -15,8 +15,7 @@ _$_Article _$$_ArticleFromJson(Map<String, dynamic> json) => _$_Article(
       imageUrl: json['urlToImage'] as String?,
     );
 
-Map<String, dynamic> _$$_ArticleToJson(_$_Article instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_ArticleToJson(_$_Article instance) => <String, dynamic>{
       'title': instance.title,
       'description': instance.description,
       'author': instance.author,
@@ -34,16 +33,14 @@ Map<String, dynamic> _$$_SourceToJson(_$_Source instance) => <String, dynamic>{
     };
 
 _$_AppState$ _$$_AppState$FromJson(Map<String, dynamic> json) => _$_AppState$(
-      articles: (json['articles'] as List<dynamic>?)
-              ?.map((e) => Article.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
+      articles:
+          (json['articles'] as List<dynamic>?)?.map((e) => Article.fromJson(e as Map<String, dynamic>)).toList() ??
+              const [],
       isLoading: json['isLoading'] as bool? ?? false,
       hasMore: json['hasMore'] as bool? ?? true,
     );
 
-Map<String, dynamic> _$$_AppState$ToJson(_$_AppState$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_AppState$ToJson(_$_AppState$ instance) => <String, dynamic>{
       'articles': instance.articles,
       'isLoading': instance.isLoading,
       'hasMore': instance.hasMore,

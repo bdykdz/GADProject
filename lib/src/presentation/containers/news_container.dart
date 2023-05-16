@@ -1,6 +1,5 @@
 part of 'index.dart';
 
-
 class ArticlesContainer extends StatelessWidget {
   const ArticlesContainer({super.key, required this.builder});
 
