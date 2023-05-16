@@ -1,6 +1,6 @@
 # GADProject - News Aggregator
 
-Este o aplicatie ce functioneaza ca  un agregator de știri și foloseste un API de știri (newsapi.org). Incarca o lista de breaking news si atunci când apeși pe un card de știre se încarca știrea completă din JSON.
+Aceasta este o aplicație care acționează ca un agregator de știri și utilizează un API de știri (newsapi.org). Aceasta încarcă o listă de știri de ultimă oră, iar atunci când apeși pe o miniatură de știre, se încarcă conținutul complet al știrii dintr-un fișier JSON.
 
 ![bbc-news-no-news](https://github.com/bdykdz/GADProject/assets/129845958/6443019a-8a0e-4cfc-8130-b6c4b8a40d98)
 
